@@ -27,19 +27,20 @@ class Paddle:
 
 
 def draw(win,paddles):
-    win.fill(WHITE)
-    pygame.display.update()
+    win.fill(BLACK)
 
     for paddle in paddles: 
         paddle.draw(win)
+    pygame.display.update()
 
 def main():
     run = True
     clock = pygame.time.Clock()
 
-    left_paddle = Paddle(10,HEIGHT//2-PADDLE_HEIGHT//2,PADDLE_WIDTH,PADDLE_HEIGHT)
-    
-    right_paddle = Paddle(WIDTH-10-PADDLE_WIDTH,HEIGHT//2-PADDLE_HEIGHT//2,PADDLE_WIDTH,PADDLE_HEIGHT)
+    left_paddle = Paddle(10, HEIGHT//2 - PADDLE_HEIGHT //
+                         2, PADDLE_WIDTH, PADDLE_HEIGHT)
+    right_paddle = Paddle(WIDTH - 10 - PADDLE_WIDTH, HEIGHT //
+                          2 - PADDLE_HEIGHT//2, PADDLE_WIDTH, PADDLE_HEIGHT)
 
     while run:
         clock.tick(FPS)
